@@ -10,8 +10,7 @@ class Solution(object):
             temp = temp + (temp << 1)
         if temp == n:
             return True
-        else:
-            return False
+        return False
         
         
         
