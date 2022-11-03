@@ -4,12 +4,14 @@ class Solution(object):
         :type n: int
         :rtype: bool
         """
-        if n <= 0:
+        temp = 1
+        
+        while(n > 1 and temp < n):
+            temp = temp + (temp << 1)
+        if temp == n:
+            return True
+        else:
             return False
-        while(n != 1):
-            if (n % 3 == 0):
-                n = n // 3
-            else:
-                return False
-        return True
+        
+        
         
