@@ -4,7 +4,17 @@ class Solution(object):
         :type n: int
         :rtype: bool
         """
-        x = n ^ (n >> 1)
-        if x & (x+1) == 0:
-            return True
-        return False
+        
+        count = 0
+        while(n>0):
+            x = n & 1
+            n = n>>1
+            if (n & 1 == x):
+                return False
+            else:
+                count = 0
+        return True
+            
+        
+    
+   
