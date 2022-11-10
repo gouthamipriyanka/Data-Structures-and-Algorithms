@@ -12,9 +12,7 @@ class Solution(object):
         while(low <= high):
             mid = low + ((high-low)//2)
             sqr = mid * mid
-            if sqr == x:
-                return mid
-            elif sqr < x:
+            if sqr <= x:
                 low = mid + 1
                 ans = mid
             else:
