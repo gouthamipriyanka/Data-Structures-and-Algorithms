@@ -7,7 +7,7 @@ class Solution(object):
         """
         low = 0
         high = len(numbers)-1
-        while(low <=high):
+        while(low < high):
             if numbers[low]+numbers[high] == target:
                 return [low+1,high+1]
             elif numbers[low] + numbers[high] > target:
