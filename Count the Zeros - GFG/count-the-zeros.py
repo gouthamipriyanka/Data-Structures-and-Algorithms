@@ -5,18 +5,19 @@ class Solution:
         # code here
         low = 0
         high = n-1
-        ans = 0
         while(low <= high):
-            mid = low +((high-low)//2)
+            mid = low + (high-low)//2
+            mid_val = arr[mid]
             
-            if arr[mid] == 1:
+            if mid_val == 1:
                 low = mid + 1
             else:
-                if (mid == 0 or arr[mid] != arr[mid-1]):
+                if mid == 0 or arr[mid] != arr[mid-1]:
                     return (n-mid)
                 else:
                     high = mid-1
-
+                    
+        return 0
 
 #{ 
  # Driver Code Starts
