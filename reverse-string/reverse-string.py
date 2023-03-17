@@ -9,7 +9,7 @@ class Solution:
         
         return self.recursionString(s,low,high)
         
-    def recursionString(self,s,low,high):
+    def recursionString(self,s: List[str], low: int, high: int) -> None:
         if low >= high:
             return
         else:
